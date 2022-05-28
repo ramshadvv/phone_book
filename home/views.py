@@ -12,7 +12,7 @@ def profile(request,pk):
     return render(request,'profile.html',{'data': item})
 def register(request):
     if request.method == 'POST':
-        new_contact = contct(
+        new_contact = contct(   
             name = request.POST['fullname'],
             phone = request.POST['phone']
         )
