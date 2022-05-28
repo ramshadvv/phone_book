@@ -4,17 +4,12 @@
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../static/css/style.css">
-	
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-	
-
     <script src="https://kit.fontawesome.com/6b20b1c14d.js" crossorigin="anonymous"></script>
-
 	<title>Contact Form</title>
 </head>
 <body>
-
 	<div class="container">
 		<!--  SEARCH FORM -->
 		<header class="header">
@@ -22,28 +17,20 @@
 			<!--  ADD-CONTACT BUTTON/ICON -->
 			<a href="{% url 'register' %}"><i class="fas fa-plus-circle add" ></i></a>
 		</header>
-
 {% for i in data reversed %}      
 		<section class="contacts-library">
 			<ul class="contacts-list">
-				
 					<div class="contact-section">
-						
 						<li class="list__item">
 							<a href="{% url 'profile' i.id %}">
 								<p class="contact-name">{{i.name}}</p>
 							</a>
-							
 						</li>
-					
-					
 					</div>
-
 			</ul>
 		</section>
         </a>
 {% endfor %}
-
 </div>
 </body>
 </html>
