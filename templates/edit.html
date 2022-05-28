@@ -1,13 +1,16 @@
+
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../static/css/delete.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/edit.css">
+	
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
     <script src="https://kit.fontawesome.com/6b20b1c14d.js" crossorigin="anonymous"></script>
-	<title>Edit Contact</title>
+	<title>Create Contact</title>
 </head>
 <body>
 	<div class="container">
@@ -16,26 +19,24 @@
 			     <i class="fas fa-chevron-circle-left back-btn"></i>
 			</a>
 		</header>
-		<form action="" method="post" enctype="multipart/form-data">
-		{% csrf_token %}
-		<section class="contact-info">
-			<div class="info-line">
-				<i class="fas fa-phone icon-gradient"></i>
-				<input type="text" class="type" name="fullname"  value="{{data.name}}">
-			</div>
-			<div class="info-line">
-				<i class="fas fa-sms icon-gradient"></i>
-				<input type="text" class="type" name="phone" value="{{data.phone}}">
-			</div>
-		</section>
-		<section class="button-container">
-			<div class="update-contact">
-				<i  class="fas fa-check-circle icon-gradient"></i>
-				
-				<button class="button" type="submit">Save Contact</button>
-			</div>
-		</section>
-		</form>
-	</div>
-</body>
+			<section class="contact-info">
+				<form action="{% url 'register' %}" method="post">{% csrf_token %}
+				<div class="info-line">
+					<i class="fas fa-phone icon-gradient"></i>
+					<input type="text" class="type" name="fullname" placeholder="Full Name" value="{{data.name}}">
+				</div>
+				<div class="info-line">
+					<i class="fas fa-sms icon-gradient"></i>
+					<input type="text" class="type" name="phone" placeholder="Phone Number" value="{{data.phone}}">
+				</div>
+				<div class="update-contact">
+					<i  class="fas fa-check-circle icon-gradient"></i>
+				    <button class="button" type="submit">Save Contact</button>
+				</div>
+			</form>
+			</section>
+			<section class="button-container">
+			</section>
+		</div>
+	</body>
 </html>
