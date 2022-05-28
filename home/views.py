@@ -1,10 +1,8 @@
 
-from django.shortcuts import render
-
-# Create your views here.
 
 from django.shortcuts import redirect, render
 from .models import *
+
 # Create your views here.
 def index(request):
     item = contct.objects.all()
@@ -24,7 +22,6 @@ def register(request):
 def edit(request,pk):
     item = contct.objects.get(id = pk)
     if request.method == 'POST':
-        # print()
         item.name = request.POST.get('fullname')
         item.phone = request.POST.get('phone')
         item.save()
