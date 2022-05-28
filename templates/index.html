@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% for i in data reversed %}      
+		<section class="contacts-library">
+			<ul class="contacts-list">
+				
+					<div class="contact-section">
+						
+						<li class="list__item">
+							<a href="{% url 'profile' i.id %}">
+								<p class="contact-name">{{i.name}}</p>
+							</a>
+							
+						</li>
+					
+					
+					</div>
+
+			</ul>
+		</section>
+        </a>
+{% endfor %}
+
+{% endblock %}
+<!-- <html><head>
+    
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+       <link rel="stylesheet" href="../static/css/all.min.css">
+   <link rel="stylesheet" href="../static/css/index.css">
+  
+       
+       
+
+   </head>
+   
+   <body>
+       
+    
+      
+       <div class="jumbotron jum">
+           
+           <div class=" navbar">
+           <h3>Phone Book <i class="far fa-address-book"></i></h3>
+           
+           </div>
+           
+           
+           <div class="row">
+               
+               
+               
+      {% for i in data reversed %}       
+               
+       <div class="col-lg-8">
+               
+               <table id="myTable" class="table text-justify table-striped">
+           
+               <thead class="tableh1">
+               <tr><th class="">ID</th>
+               <th class="">Name</th>
+               <th class="">Phone</th>
+               <th class="col-1"></th>
+               <th class="col-1"></th>    
+               </tr></thead>
+               
+               <tbody>
+				
+                <tr><td class="">{{i.id}}</td>
+                    <td class=""></a>{{i.name}}</td>
+                    <td class="">{{i.phone}}</td>
+                    <td class="col-1"><button>edit</button></td>
+                    <td class="col-1"><button>delete</button></td>    
+                    </tr>
+               
+				</a>
+               
+               </tbody>
+                
+           
+               </table>
+
+               {% endfor %}  
+       </div>
+               
+           
+           
+           </div>    
+       </div>
+       
+       
+       
+       <footer class="text-center">Ahmad Al-Shahawi 2019.All rights reserved</footer>
+       
+          <script src="js/jquery-3.3.1.min.js"></script>
+   <script src="js/popper.min.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+   <script src="js/index.js"></script>
+   
+   
+
+</body></html> -->
+
